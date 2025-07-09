@@ -4,6 +4,7 @@ import com.uca.parcialfinalncapas.dto.request.TicketCreateRequest;
 import com.uca.parcialfinalncapas.dto.request.TicketUpdateRequest;
 import com.uca.parcialfinalncapas.dto.response.TicketResponse;
 import com.uca.parcialfinalncapas.dto.response.TicketResponseList;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -46,4 +47,10 @@ public interface TicketService {
      */
     List<TicketResponseList> getAllTickets();
     List<TicketResponse> getTicketsByRequesterCorreo(String correoUsuario);
+
+    List<TicketResponseList> getAllTicketsForList();
+
+    List<TicketResponseList> getTicketsByUsuarioIdForList(Long id);
+
+    TicketResponse createTicket(@Valid TicketCreateRequest ticketRequest, Long usuarioSolicitanteId, Long tecnicoAsignadoId);
 }

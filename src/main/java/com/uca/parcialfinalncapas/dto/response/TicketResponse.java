@@ -15,4 +15,7 @@ public class TicketResponse {
     private LocalDate fecha;
     private String correoSolicitante;
     private String correoSoporte;
+
+    public void setId(Long id) {
+    }
 }

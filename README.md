@@ -3,9 +3,9 @@
 Este repositorio contiene un proyecto para evaluar y practicar los conceptos de seguridad en aplicaciones Spring Boot usando JWT, roles y Docker.
 
 ### Estudiantes
-- **Nombre del estudiante 1**: [Tu nombre aquí] - [Carnet aquí]
+- **Nombre del estudiante 1**: Miriam Sarai Leiva Cabrera - 00164021
 - **Nombre del estudiante 2**: [Tu nombre aquí] - [Carnet aquí]
-- Sección: [Tu sección aquí]
+- Sección: 02
 ---
 
 ## Sistema de Soporte Técnico
@@ -31,19 +31,19 @@ _Si van a crear mas endpoints como el login o registrarse recuerden actualizar p
 ### Partes de desarrollo
 
 #### Parte 1: Implementar login con JWT
-- [ ] Crear endpoint `/auth/login`.
-- [ ] Validar usuario y contraseña (puede estar en memoria o en BD).
-- [ ] Retornar JWT firmado.
+- [x] Crear endpoint `/auth/login`.
+- [x] Validar usuario y contraseña (puede estar en memoria o en BD).
+- [x] Retornar JWT firmado.
 
 #### Parte 2: Configurar filtros y validación del token
-- [ ] Crear filtro para validar el token en cada solicitud.
-- [ ] Extraer usuario desde el JWT.
-- [ ] Añadir a contexto de seguridad de Spring.
+- [x] Crear filtro para validar el token en cada solicitud.
+- [x] Extraer usuario desde el JWT.
+- [x] Añadir a contexto de seguridad de Spring.
 
 #### Parte 3: Proteger endpoints con Spring Security
-- [ ] Permitir solo el acceso al login sin token.
+- [x] Permitir solo el acceso al login sin token.
 - [ ] Proteger todos los demás endpoints.
-- [ ] Manejar errores de autorización adecuadamente.
+- [x] Manejar errores de autorización adecuadamente.
 
 #### Parte 4: Aplicar roles a los endpoints
 
@@ -53,7 +53,7 @@ _Si van a crear mas endpoints como el login o registrarse recuerden actualizar p
 | TECH  | Ver todos los tickets, actualizar estado         |
 
 - [ ] Usar `@PreAuthorize` o reglas en el `SecurityFilterChain`.
-- [ ] Validar que un USER solo vea sus tickets.
+- [x] Validar que un USER solo vea sus tickets.
 - [ ] Validar que solo un TECH pueda modificar tickets.
 
 #### Parte 5: Agregar Docker

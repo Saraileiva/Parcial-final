@@ -40,7 +40,7 @@ public class AuthController {
             );
 
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            User user = userRepository.findByCorreo(userDetails.getUsername())
+            User user = userRepository.findByEmail(userDetails.getUsername())
                     .orElseThrow(() -> new RuntimeException("User not found after authentication"));
 
             String jwt = jwtUtil.generateToken(user.getCorreo(), user.getRol().name()); // Usar getRol().name()
@@ -53,7 +53,7 @@ public class AuthController {
 
     @PostMapping("/register-test-user")
     public ResponseEntity<String> registerTestUser(@RequestBody LoginRequest request, @RequestParam String rol) {
-        if (userRepository.findByCorreo(request.getCorreo()).isPresent()) {
+        if (userRepository.findByEmail(request.getCorreo()).isPresent()) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Correo already exists");
         }
         User newUser = new User();
