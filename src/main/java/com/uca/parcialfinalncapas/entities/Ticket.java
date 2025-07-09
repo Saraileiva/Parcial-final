@@ -24,4 +24,9 @@ public class Ticket {
     private Long usuarioId;
     private Long tecnicoAsignadoId;
     private LocalDateTime fecha;
+
+    @ManyToOne
+    @JoinColumn(name = "requester_id", nullable = false)
+    private User requester; // El usuario que creó el ticket
+
 }

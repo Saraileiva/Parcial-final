@@ -45,4 +45,5 @@ public interface TicketService {
      * @return una lista de todos los tickets
      */
     List<TicketResponseList> getAllTickets();
+    List<TicketResponse> getTicketsByRequesterCorreo(String correoUsuario);
 }

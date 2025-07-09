@@ -10,5 +10,5 @@ import java.util.Optional;
  * Permite realizar operaciones CRUD sobre los usuarios.
  */
 public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByCorreo(String correo);
+    Optional<User> findByEmail(String correo);
 }

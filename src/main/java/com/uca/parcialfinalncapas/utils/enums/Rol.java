@@ -1,6 +1,10 @@
 package com.uca.parcialfinalncapas.utils.enums;
 
+import jdk.jshell.Snippet;
+import lombok.Builder;
 import lombok.Getter;
+
+import java.util.UUID;
 
 @Getter
 public enum Rol {
@@ -11,5 +15,9 @@ public enum Rol {
 
     Rol(String value) {
         this.value = value;
+    }
+
+
+    public UUID getId() {
     }
 }
